@@ -1,0 +1,12 @@
+version: "3"
+services:
+  horse_racing_forecast_bbs_front_end:
+    build:
+      context: ./horse_racing_forecast_bbs_front_end/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: horse_racing_forecast_bbs_front_end
+    volumes:
+      - ./horse_racing_forecast_bbs_front_end:/usr/src/app/next
+    command: yarn dev
