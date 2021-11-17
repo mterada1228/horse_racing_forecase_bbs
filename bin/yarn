@@ -1,0 +1,2 @@
+#!/bin/sh
+docker-compose exec horse_racing_forecast_bbs_front_end yarn "$@"

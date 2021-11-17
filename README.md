@@ -5,6 +5,19 @@ Clone a this repository.
 $ git clone git@github.com:mterada1228/horse_racing_forecase_bbs.git
 ```
 
+## Install `direnv`
+`direnv` is necessary for this project. Run the following commands, and Install the `direnv`.
+
+``` sh
+$ brew install direnv
+
+$ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
+$ source ~/.zshrc
+
+$ cd horse_racing_forecast_bbs
+$ direnv allow
+```
+
 ## Clone application repositories
 Move to the following directory.
 
