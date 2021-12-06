@@ -30,6 +30,11 @@ $ cd horse_racing_forecase_bbs
   $ git clone git@github.com:mterada1228/horse_racing_forecast_bbs_front_end.git
   ```
 
+- API
+  ``` sh
+  $ git clone git@github.com:mterada1228/horse_racing_forecast_bbs_api.git
+  ```
+
 # Construct development environment
 Run the following commands to construct containers for services.
 
