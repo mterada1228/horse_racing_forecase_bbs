@@ -1,11 +1,14 @@
 {
   "folders": [
-	{
-		"path": "horse_racing_forecast_bbs_front_end"
-	},
-	{
-		"path": "."
-	}
-],
+		{
+			"path": "horse_racing_forecast_bbs_front_end"
+		},
+		{
+			"path": "horse_racing_forecast_bbs_api"
+		},
+		{
+			"path": "."
+		}
+	],
   "settings": {}
 }

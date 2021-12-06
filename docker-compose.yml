@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   horse_racing_forecast_bbs_front_end:
     build:
@@ -10,3 +11,29 @@ services:
     volumes:
       - ./horse_racing_forecast_bbs_front_end:/usr/src/app/next
     command: yarn dev
+  horse_racing_forecast_bbs_api:
+    build:
+      context: ./horse_racing_forecast_bbs_api/
+      dockerfile: Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3001 -b '0.0.0.0'"
+    volumes:
+      - ./horse_racing_forecast_bbs_api:/horse_racing_forecast_bbs_api
+    ports:
+      - "3001:3001"
+    depends_on:
+      - horse_racing_forecast_bbs_db
+    stdin_open: true
+    tty: true
+  horse_racing_forecast_bbs_db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+    driver: local
